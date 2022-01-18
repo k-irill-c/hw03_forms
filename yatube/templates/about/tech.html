@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Технологии{% endblock %}
+{% block content %}
+<div class="container py-5"> 
+<div class="row">
+  <h1>Вот что я умею</h1>
+  <hr>
+  <aside class="col-12 col-md-3">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        Python
+      </li>
+      <li class="list-group-item">
+        Django
+      </li>
+    </ul>
+  </aside>
+  <article class="col-12 col-md-9">
+    <p>В питоне я научился работать с переменными, словарями, классами!</p>
+    <p>В Джанго погружаюсь - учусь работать с шаблонами!</p>
+  </article>
+  <img src= "{% static 'img/fav/Ynd.jpg' %}"> 
+  <h4>А вот трудностей хватает тоже!</h4>
+    <hr>
+    <p> Например Декораторы и Контекст-процессоры! </p>
+    <p> Ну, как говорится: <i>"Тяжело в учении - легко в бою!"<i> Все будет хорошо! </p>
+</div>
+{% endblock %}
