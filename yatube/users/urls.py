@@ -8,8 +8,8 @@ from django.contrib.auth.views import PasswordResetCompleteView
 from django.urls import path
 from . import views
 
-
 app_name = 'users'
+
 
 urlpatterns = [
     path(
