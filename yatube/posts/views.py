@@ -14,7 +14,7 @@ from posts.models import User
 def index(request):
     context = get_page_context(
         Post.objects.all().order_by('-pub_date'), request
-        )
+    )
     template = 'posts/index.html'
     return render(request, template, context)
 
@@ -65,7 +65,7 @@ def post_create(request):
             return redirect('posts:profile', username=post.author.username)
     context = {
         'form': form,
-        }
+    }
     return render(request, 'posts/create_post.html', context)
 
 
@@ -90,5 +90,5 @@ def post_edit(request, post_id):
             'groups': groups,
             'is_edit': is_edit,
             'post': post,
-            }
+        }
         return render(request, template, context)
