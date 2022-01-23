@@ -33,8 +33,7 @@
     <article class="col-12 col-md-9">
       <p> {{ posts.text }} </p>
       {% if posts.author.pk == request.user.pk %}
-      <a class="btn btn-primary" href="{% url 'posts:post_edit' posts.id %}"> Редактировать запись </a>
-        {% csrf_token %} 
+        <a class="btn btn-primary" href="{% url 'posts:post_edit' posts.pk %}"> Редактировать запись </a>
       {% endif %}
     </article>
   </div>
