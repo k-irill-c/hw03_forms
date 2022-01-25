@@ -3,7 +3,6 @@ from django.shortcuts import get_object_or_404
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 
-
 from posts.utils import get_page_context
 from .models import Post
 from .models import Group
@@ -79,7 +78,6 @@ def post_edit(request, post_id):
         return redirect('posts:index')
     if form.is_valid():
         post = form.save(commit=False)
-        post.text = form.cleaned_data['text']
         template = 'posts:post_detail'
         post.save()
         return redirect(template, post_id=post.pk)

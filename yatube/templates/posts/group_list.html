@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block title %} Записи сообщества {{ group.title}}{% endblock %}
 {% block content %}
   <div class="container py-5">
@@ -28,6 +28,6 @@
         <hr>
       {% endif %}
     {% endfor %}
-    {% include 'includes/paginator.html' %}
+    {% include "includes/paginator.html" %}
   </div>
 {% endblock %} 

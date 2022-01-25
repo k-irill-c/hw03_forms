@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block title %}Последние обновления на сайтe{% endblock %}
 {% block content %}
   <div class="container py-5"> 
@@ -27,6 +27,6 @@
         <hr>
       {% endif %}
     {% endfor %}
-    {% include 'includes/paginator.html' %}
+    {% include "includes/paginator.html" %}
   </div>
 {% endblock %} 
